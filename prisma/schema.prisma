@@ -13,3 +13,36 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model Coach {
+  id          Int    @id @default(autoincrement())
+  firstName   String
+  lastName    String
+  phoneNumber String
+  Slot        Slot[]
+}
+
+model Student {
+  id          Int    @id @default(autoincrement())
+  firstName   String
+  lastName    String
+  phoneNumber String
+  Slot        Slot[]
+}
+
+model Slot {
+  id                  Int      @id @default(autoincrement())
+  start               DateTime
+  end                 DateTime
+  coach               Coach    @relation(fields: [coachId], references: [id])
+  coachId             Int
+  student             Student? @relation(fields: [studentId], references: [id])
+  studentId           Int?
+  studentSatisfcation Int?
+  coachNotes          String?
+}
+
+// Thoughts:
+// * Could have a Meeting -> Slot? Seems like overkill for now vs just having the
+//    slot be claimed or unclaimed with a StudentId
+// * Could have some kind of slot status enum? Also seems like overkill
