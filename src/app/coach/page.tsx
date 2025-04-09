@@ -35,10 +35,3 @@ export default async function Home() {
     </>
   );
 }
-
-// Todo strip phone numbers in the db layer
-
-// Requirements
-// Coaches can add slots of availability to their calendars. These slots are always 2 hours long and each slot can be booked by exactly 1 student.
-// Students can book upcoming, available slots for any coach.
-// When a slot is booked, the student can view the coach's phone-number.

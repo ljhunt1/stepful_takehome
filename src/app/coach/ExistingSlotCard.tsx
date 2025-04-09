@@ -27,7 +27,6 @@ export const ExistingSlotCard = (props: { slot: CoachSlot }) => {
           <div>
             Student Phone Number: {formatPhoneNumber(slot.student.phoneNumber)}
           </div>
-          {/* Todo make these inputs */}
           <label htmlFor="satisfaction">Student Satisfaction Score</label>
           <input
             type="text"
