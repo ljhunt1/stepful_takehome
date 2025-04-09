@@ -31,7 +31,7 @@ export default async function Home() {
   return (
     <>
       <div>Hello coach {COACH_ID}</div>
-      <CoachClientside slots={slots} />
+      <CoachClientside slots={slots} coachId={COACH_ID} />
     </>
   );
 }
