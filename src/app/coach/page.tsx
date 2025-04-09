@@ -40,8 +40,5 @@ export default async function Home() {
 
 // Requirements
 // Coaches can add slots of availability to their calendars. These slots are always 2 hours long and each slot can be booked by exactly 1 student.
-// Coaches can view their own upcoming slots.
 // Students can book upcoming, available slots for any coach.
-// When a slot is booked, both the student and coach can view each other’s phone-number.
-// After they complete a call with a student, coaches will record the student’s satisfaction (an integer 1-5) and write some free-form notes.
-// Coaches should be able to review their past scores and notes for all of their calls.
+// When a slot is booked, the student can view the coach's phone-number.
