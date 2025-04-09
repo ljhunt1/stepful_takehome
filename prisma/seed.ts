@@ -1,11 +1,10 @@
 // seed data for the database. must run after prismaClient is generated
 // Runs with ts-node, following https://www.prisma.io/docs/orm/prisma-migrate/workflows/seeding
 
-// Absolute import otherwise ts-node gets confused. Apparently `tsconfig-paths`
+// Relative import otherwise ts-node gets confused. Apparently `tsconfig-paths`
 // can fix this but that's too much work
-import { PrismaClient } from "../src/(generated)/prismaClient";
+import { prisma } from "../src/lib/prisma";
 
-const prisma = new PrismaClient();
 async function main() {
   // Seed coaches
   const coachGoldmill = await prisma.coach.upsert({

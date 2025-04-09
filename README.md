@@ -11,7 +11,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 4. Setup Postgres+Prisma
    1. Have a postgresql server + database which you have admin access to. You likely want the server running locally, in which case install postgresql https://www.postgresql.org/ and setup a local db in e.g. pgAdmin
    2. Update the DATABASE_URL in `.env` to connect to your postgres server + database
-   3. Run `npx prisma db push`. This sets up the database schema and generates the prisma javascript client in `src/(generated)/prismaClient`
+   3. Run `npx prisma db push`. This sets up the database schema and generates the prisma javascript client in `src/lib/prismaClient`
    4. Run `npx prisma db seed`. This pushes seed data to your database
 5. TODO stage data, edit locals etc.
 6. `npm run dev` starts the app at [http://localhost:3000](http://localhost:3000)

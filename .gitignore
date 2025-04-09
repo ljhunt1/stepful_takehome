@@ -34,7 +34,7 @@ yarn-error.log*
 .env*
 
 # primsaClient generated files
-src/(generated)
+src/lib/prismaClient
 
 # vercel
 .vercel
